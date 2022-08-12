@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sauce Demo Website Tests">
+    <test name="Shadow DOM Tests with Chrome Browser">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ShadowDomTests">
+                <methods>
+                    <include name="testShadowDomRootOnChromeDownloadPage"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Shadow DOM Tests with Firefox Browser" enabled ="false">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="ShadowDomTests">
+                <methods>
+                    <include name="testShadowDom"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+</suite>
