@@ -4,13 +4,13 @@
 
 ## :question: What is this Repository about?
 
-- This repo contains automation tests for finding Shadow DOM elements using Selenium WebDriver 4.
+- This repo contains automation tests for Shadow DOM elements using Selenium WebDriver 4.
 - This repo uses Maven as build tool and TestNG testing framework to run the tests.
 - Google Chrome's Download Page has been used as a demo page to automate Shadow DOM elements.
 
 ## Running the Tests
 - To run the test from command line use the following command:
-- `mvn clean install`
+`mvn clean install`
 - To run the tests using TestNG, right-click on the `testng.xml` file and select `Run '...\testng.xml'` 
 
 🧬 Need Assistance?
