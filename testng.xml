@@ -11,7 +11,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow DOM Tests with Firefox Browser" enabled ="false">
+    <test name="Shadow DOM Tests with Firefox Browser" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowDomTests">
@@ -21,7 +21,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow DOM Tests on Wait Website" enabled ="true">
+    <test name="Shadow DOM Tests on Watir Website">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="ShadowDomTests">

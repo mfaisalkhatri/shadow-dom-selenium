@@ -29,7 +29,8 @@ public class ShadowDomTests extends BaseTest {
     public void testShadowDomWatir () {
         getDriver ().get ("http://watir.com/examples/shadow_dom.html");
         HomePage homePage = new HomePage ();
+       // assertEquals (homePage.getSomeText(), "some text");
         assertEquals (homePage.getShadowDomText (), "some text");
+        assertEquals (homePage.getNestedShadowTest (),"nested text");
     }
-
 }
