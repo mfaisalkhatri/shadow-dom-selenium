@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Sauce Demo Website Tests">
-    <test name="Shadow DOM Tests with Chrome Browser">
+    <test name="Shadow DOM Tests with Chrome Browser" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowDomTests">
@@ -12,7 +12,7 @@
         </classes>
     </test> <!-- Test -->
     <test name="Shadow DOM Tests with Firefox Browser" enabled ="false">
-        <parameter name="browser" value="firefox"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowDomTests">
                 <methods>
@@ -21,4 +21,15 @@
             </class>
         </classes>
     </test> <!-- Test -->
+    <test name="Shadow DOM Tests on Wait Website" enabled ="true">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ShadowDomTests">
+                <methods>
+                    <include name="testShadowDomWatir"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
 </suite>

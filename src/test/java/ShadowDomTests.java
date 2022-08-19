@@ -1,6 +1,7 @@
 import org.testng.annotations.Test;
 import pages.google.DownloadPage;
 import pages.theinternet.ShadowDom;
+import pages.watir.HomePage;
 
 import static org.testng.Assert.assertEquals;
 import static setup.DriverManager.getDriver;
@@ -25,6 +26,13 @@ public class ShadowDomTests extends BaseTest {
         assertEquals (downloadPage.pageHeaderTextUsingJScripExecutor(), "Downloads");
     }
 
+
+    @Test
+    public void testShadowDomWatir() {
+        getDriver ().get ("http://watir.com/examples/shadow_dom.html");
+        HomePage homePage = new HomePage ();
+        assertEquals(homePage.getShadowDomText (), "some text");
+    }
 
 
 }

@@ -1,6 +1,8 @@
 package pages.theinternet;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
+import org.openqa.selenium.WebElement;
 
 import static setup.DriverManager.getDriver;
 
