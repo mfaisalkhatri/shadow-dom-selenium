@@ -9,9 +9,19 @@
 - Google Chrome's Download Page has been used as a demo page to automate Shadow DOM elements.
 
 ## Running the Tests
+
+By default, tests would be running on LambdaTest Platform. 
+If you want to run it on your local machine, please update the browser value in `testng.xml` to `chrome` or 
+`firefox` and you should be able to run it in local chrome or firefox respectively.
+
 - To run the test from command line use the following command:
-`mvn clean install`
-- To run the tests using TestNG, right-click on the `testng.xml` file and select `Run '...\testng.xml'` 
+
+    `mvn clean install -Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
+
+- To run the tests using TestNG: 
+  1. In the Run Configuration add the LambdaTest username and access key in the VM option as follows:
+      `-Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
+  2. Right-click on the `testng.xml` file and select `Run '...\testng.xml'` 
 
 🧬 Need Assistance?
 

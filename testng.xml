@@ -22,7 +22,7 @@
         </classes>
     </test> <!-- Test -->
     <test name="Shadow DOM Tests on Wait Website" enabled ="true">
-        <parameter name="browser" value="chrome"/>
+        <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="ShadowDomTests">
                 <methods>
