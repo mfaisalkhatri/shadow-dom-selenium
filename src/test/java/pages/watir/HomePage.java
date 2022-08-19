@@ -12,14 +12,12 @@ import org.openqa.selenium.WebElement;
  **/
 public class HomePage {
 
-    public String getShadowDomText() {
-        WebElement shadowHost = getDriver().findElement (By.id("shadow_host"));
+    public String getShadowDomText () {
+        WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
         SearchContext shadowRoot = shadowHost.getShadowRoot ();
-        String text = shadowRoot.findElement (By.cssSelector ("#shadow_content > span")).getText ();
+        String text = shadowRoot.findElement (By.cssSelector ("#shadow_content > span"))
+            .getText ();
         return text;
     }
 
-    public String nestedShadowDomText () {
-        
-    }
 }
