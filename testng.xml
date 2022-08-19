@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Sauce Demo Website Tests">
+<suite name="Shadow DOM Automation Tests">
     <test name="Shadow DOM Tests with Chrome Browser" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
@@ -22,7 +22,7 @@
         </classes>
     </test> <!-- Test -->
     <test name="Shadow DOM Tests on Watir Website">
-        <parameter name="browser" value="remote-chrome"/>
+        <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowDomTests">
                 <methods>
