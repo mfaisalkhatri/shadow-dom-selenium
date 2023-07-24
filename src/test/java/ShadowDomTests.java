@@ -11,7 +11,7 @@ public class ShadowDomTests extends BaseTest {
     @Test
     public void testShadowDom () {
         getDriver ().get ("https://the-internet.herokuapp.com/shadowdom");
-        ShadowDom shadowDom = new ShadowDom ();
+        final ShadowDom shadowDom = new ShadowDom ();
         assertEquals (shadowDom.shadowTextOne (), "Let's have some different text!");
         System.out.println (shadowDom.shadowTextTwo ());
     }
@@ -19,7 +19,7 @@ public class ShadowDomTests extends BaseTest {
     @Test
     public void testShadowDomRootOnChromeDownloadPage () {
         getDriver ().get ("chrome://downloads/");
-        DownloadPage downloadPage = new DownloadPage ();
+        final DownloadPage downloadPage = new DownloadPage ();
         assertEquals (downloadPage.downloadPageHeaderText (), "Downloads");
         assertEquals (downloadPage.googleDownloadPageHeaderText (), "Downloads");
         assertEquals (downloadPage.pageHeaderTextUsingJScripExecutor (), "Downloads");
@@ -28,7 +28,7 @@ public class ShadowDomTests extends BaseTest {
     @Test
     public void testShadowDomWatir () {
         getDriver ().get ("http://watir.com/examples/shadow_dom.html");
-        HomePage homePage = new HomePage ();
+        final HomePage homePage = new HomePage ();
         // assertEquals (homePage.getSomeText(), "some text");
         assertEquals (homePage.getShadowDomText (), "some text");
         assertEquals (homePage.getNestedShadowText (), "nested text");

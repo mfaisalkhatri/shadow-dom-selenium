@@ -13,10 +13,9 @@ import org.openqa.selenium.WebElement;
  **/
 public class HomePage {
 
-    public SearchContext expandRootElement (WebElement element) {
-        SearchContext shadowRoot = (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript (
+    public SearchContext expandRootElement (final WebElement element) {
+        return (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript (
             "return arguments[0].shadowRoot", element);
-        return shadowRoot;
     }
 
     public String getSomeText () {
@@ -25,25 +24,23 @@ public class HomePage {
     }
 
     public String getShadowDomText () {
-        WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
-        SearchContext shadowRoot = shadowHost.getShadowRoot ();
-        String text = shadowRoot.findElement (By.cssSelector ("#shadow_content > span"))
+        final WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
+        final SearchContext shadowRoot = shadowHost.getShadowRoot ();
+        return shadowRoot.findElement (By.cssSelector ("#shadow_content > span"))
             .getText ();
-        return text;
     }
 
     public String getNestedShadowText () {
-        WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
-        SearchContext shadowRoot = shadowHost.getShadowRoot ();
-        WebElement shadowContent = shadowRoot.findElement (By.cssSelector ("#nested_shadow_host"));
-        SearchContext shadowRootTwo = shadowContent.getShadowRoot ();
-        String nestedText = shadowRootTwo.findElement (By.cssSelector ("#nested_shadow_content > div"))
+        final WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
+        final SearchContext shadowRoot = shadowHost.getShadowRoot ();
+        final WebElement shadowContent = shadowRoot.findElement (By.cssSelector ("#nested_shadow_host"));
+        final SearchContext shadowRootTwo = shadowContent.getShadowRoot ();
+        return shadowRootTwo.findElement (By.cssSelector ("#nested_shadow_content > div"))
             .getText ();
-        return nestedText;
     }
 
     public String getNestedText () {
-        WebElement nestedText = getDriver ().findElement (By.id ("shadow_host"))
+        final WebElement nestedText = getDriver ().findElement (By.id ("shadow_host"))
             .getShadowRoot ()
             .findElement (By.cssSelector ("#nested_shadow_host"))
             .getShadowRoot ()
@@ -52,10 +49,10 @@ public class HomePage {
     }
 
     public String getNestedTextUsingJSExecutor () {
-        WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
-        SearchContext shadowRootOne = expandRootElement (shadowHost);
-        WebElement nestedShadowHost = shadowRootOne.findElement (By.cssSelector ("#nested_shadow_host"));
-        SearchContext shadowRootTwo = expandRootElement (nestedShadowHost);
+        final WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
+        final SearchContext shadowRootOne = expandRootElement (shadowHost);
+        final WebElement nestedShadowHost = shadowRootOne.findElement (By.cssSelector ("#nested_shadow_host"));
+        final SearchContext shadowRootTwo = expandRootElement (nestedShadowHost);
         return shadowRootTwo.findElement (By.cssSelector ("#nested_shadow_content > div"))
             .getText ();
 
