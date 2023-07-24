@@ -11,7 +11,7 @@ public class BaseTest {
 
     @BeforeClass(alwaysRun = true)
     @Parameters({"browser"})
-    public void setupTest (String browser) {
+    public void setupTest (final String browser) {
         createDriver(browser);
     }
 

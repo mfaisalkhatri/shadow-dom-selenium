@@ -41,5 +41,14 @@
             </class>
         </classes>
     </test> <!-- Test -->
-
+    <test name="Test Shadow DOM Tests on HTMLElements Website on LambdaTest Cloud Grid">
+        <parameter name="browser" value="remote-chrome"/>
+        <classes>
+            <class name="ShadowRootTests">
+                <methods>
+                    <include name="testShadowRootElement"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
 </suite>

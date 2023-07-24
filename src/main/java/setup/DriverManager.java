@@ -15,14 +15,14 @@ import java.util.HashMap;
 import static java.text.MessageFormat.format;
 
 public class DriverManager {
-    private static       WebDriver driver;
-    private static final String    LT_USERNAME     = System.getProperty ("username");
-    private static final String    LT_ACCESS_TOKEN = System.getProperty ("accessKey");
-    private static final String    GRID_URL        = "@hub.lambdatest.com/wd/hub";
+    private static WebDriver driver;
+    private static final String LT_USERNAME = System.getProperty("LT_USERNAME");
+    private static final String LT_ACCESS_TOKEN = System.getProperty("LT_ACCESSKEY");
+    private static final String GRID_URL = "@hub.lambdatest.com/wd/hub";
 
-    public static void quitDriver () {
-        if (null != getDriver ()) {
-            getDriver ().quit ();
+    public static void quitDriver() {
+        if (null != getDriver()) {
+            getDriver().quit();
         }
     }
 
@@ -64,7 +64,6 @@ public class DriverManager {
     private static void setupRemoteChromeDriver () {
         final ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName ("Windows 10");
-        browserOptions.setBrowserVersion ("104.0");
         final HashMap<String, Object> ltOptions = new HashMap<String, Object>();
         ltOptions.put ("username", LT_USERNAME);
         ltOptions.put ("accessKey", LT_ACCESS_TOKEN);
