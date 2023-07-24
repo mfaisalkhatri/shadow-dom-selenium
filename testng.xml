@@ -21,12 +21,22 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow DOM Tests on Watir Website">
+    <test name="Shadow DOM Tests on Watir Website" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowDomTests">
                 <methods>
                     <include name="testShadowDomWatir"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+    <test name="Shadow DOM Tests on HTMLElements Website">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="ShadowRootTests">
+                <methods>
+                    <include name="testShadowRootElement"/>
                 </methods>
             </class>
         </classes>
