@@ -31,7 +31,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow DOM Tests on HTMLElements Website">
+    <test name="Shadow Root Element Tests on HTMLElements Website">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowRootTests">
@@ -44,7 +44,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Test Shadow DOM Tests on HTMLElements Website on LambdaTest Cloud Grid">
+    <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="ShadowRootTests">

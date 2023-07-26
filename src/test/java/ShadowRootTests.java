@@ -7,7 +7,6 @@ import static setup.DriverManager.getDriver;
 
 public class ShadowRootTests extends BaseTest {
 
-
     @BeforeClass
     public void navigateToWebsite() {
         getDriver().get("https://www.htmlelements.com/demos/menu/shadow-dom/index.htm");
