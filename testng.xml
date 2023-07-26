@@ -36,7 +36,10 @@
         <classes>
             <class name="ShadowRootTests">
                 <methods>
-                    <include name="testShadowRootElement"/>
+                    <include name="testFileMenuShadowRootElement"/>
+                    <include name="testNewMenuShadowRootElement"/>
+                    <include name="testEditMenuShadowRootElement"/>
+                    <include name="testUndoMenuShadowRootElement"/>
                 </methods>
             </class>
         </classes>
@@ -46,7 +49,10 @@
         <classes>
             <class name="ShadowRootTests">
                 <methods>
-                    <include name="testShadowRootElement"/>
+                    <include name="testFileMenuShadowRootElement"/>
+                    <include name="testNewMenuShadowRootElement"/>
+                    <include name="testEditMenuShadowRootElement"/>
+                    <include name="testUndoMenuShadowRootElement"/>
                 </methods>
             </class>
         </classes>
