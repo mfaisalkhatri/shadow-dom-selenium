@@ -21,8 +21,8 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow DOM Tests on Watir Website" enabled="false">
-        <parameter name="browser" value="chrome"/>
+    <test name="Shadow DOM Tests on Watir Website" enabled="true">
+        <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="ShadowDomTests">
                 <methods>
@@ -31,7 +31,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow Root Element Tests on HTMLElements Website">
+    <test name="Shadow Root Element Tests on HTMLElements Website" enabled="false">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="ShadowRootTests">
@@ -44,7 +44,7 @@
             </class>
         </classes>
     </test> <!-- Test -->
-    <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid">
+    <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="ShadowRootTests">
