@@ -57,4 +57,15 @@
             </class>
         </classes>
     </test> <!-- Test -->
+    <test name="Shadow DOM Tests on Selenium Playground Website" enabled="true">
+        <parameter name="browser" value="remote-chrome"/>
+        <classes>
+            <class name="ShadowDomTests">
+                <methods>
+                    <include name="testShadowDomSeleniumPlayground"/>
+                </methods>
+            </class>
+        </classes>
+    </test> <!-- Test -->
+
 </suite>

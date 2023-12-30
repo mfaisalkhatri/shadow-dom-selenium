@@ -1,5 +1,6 @@
 import org.testng.annotations.Test;
 import pages.google.DownloadPage;
+import pages.seleniumplayground.ShadowDomPage;
 import pages.theinternet.ShadowDom;
 import pages.watir.HomePage;
 
@@ -34,5 +35,16 @@ public class ShadowDomTests extends BaseTest {
         assertEquals (homePage.getNestedShadowText (), "nested text");
         assertEquals (homePage.getNestedText (), "nested text");
         assertEquals (homePage.getNestedTextUsingJSExecutor (), "nested text");
+    }
+
+    @Test
+    public void testShadowDomSeleniumPlayground() {
+        getDriver().get("https://www.lambdatest.com/selenium-playground/shadow-dom");
+        ShadowDomPage shadowDomPage = new ShadowDomPage();
+        String name = "faisal";
+        String email = "faisal.k@gmail.com";
+        shadowDomPage.updateDetails(name, email);
+        assertEquals(shadowDomPage.getNameText(), name);
+        assertEquals(shadowDomPage.getEmailText(), email);
     }
 }
