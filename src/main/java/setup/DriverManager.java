@@ -69,6 +69,7 @@ public class DriverManager {
         ltOptions.put ("accessKey", LT_ACCESS_TOKEN);
         ltOptions.put ("selenium_version", "4.0.0");
         ltOptions.put ("build", "Shadow DOM Selenium Chrome Tests");
+        ltOptions.put ("name", "Shadow DOM Selenium Tests");
         ltOptions.put ("w3c", true);
         ltOptions.put ("plugin", "java-testNG");
         browserOptions.setCapability ("LT:Options", ltOptions);
