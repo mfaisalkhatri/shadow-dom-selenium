@@ -1,3 +1,5 @@
+package tests;
+
 import org.testng.annotations.Test;
 import pages.google.DownloadPage;
 import pages.seleniumplayground.ShadowDomPage;
@@ -21,9 +23,9 @@ public class ShadowDomTests extends BaseTest {
     public void testShadowDomRootOnChromeDownloadPage () {
         getDriver ().get ("chrome://downloads/");
         final DownloadPage downloadPage = new DownloadPage ();
-        assertEquals (downloadPage.downloadPageHeaderText (), "Downloads");
-        assertEquals (downloadPage.googleDownloadPageHeaderText (), "Downloads");
-        assertEquals (downloadPage.pageHeaderTextUsingJScripExecutor (), "Downloads");
+        assertEquals (downloadPage.downloadPageHeaderText (), "Download history");
+        assertEquals (downloadPage.googleDownloadPageHeaderText (), "Download history");
+        assertEquals (downloadPage.pageHeaderTextUsingJScripExecutor (), "Download history");
     }
 
     @Test
