@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Shadow DOM Automation Tests">
-    <test name="Shadow DOM Tests with Chrome Browser" enabled="true">
+    <test name="Shadow DOM Tests with Chrome Browser">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.ShadowDomTests">
@@ -11,7 +11,7 @@
             </class>
         </classes>
     </test>
-    <test name="Shadow DOM Tests with Firefox Browser" enabled="true">
+    <test name="Shadow DOM Tests with Firefox Browser">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.ShadowDomTests">
@@ -21,7 +21,7 @@
             </class>
         </classes>
     </test>
-    <test name="Shadow DOM Tests on Watir Website" enabled="true">
+    <test name="Shadow DOM Tests on Watir Website" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="tests.ShadowDomTests">
@@ -31,7 +31,7 @@
             </class>
         </classes>
     </test>
-    <test name="Shadow Root Element Tests on HTMLElements Website" enabled="true">
+    <test name="Shadow Root Element Tests on HTMLElements Website">
         <parameter name="browser" value="chrome"/>
         <classes>
             <class name="tests.ShadowRootTests">
@@ -44,7 +44,7 @@
             </class>
         </classes>
     </test>
-    <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid" enabled="true">
+    <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="tests.ShadowRootTests">
@@ -57,7 +57,7 @@
             </class>
         </classes>
     </test>
-    <test name="Shadow DOM Tests on Selenium Playground Website" enabled="true">
+    <test name="Shadow DOM Tests on Selenium Playground Website" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
             <class name="tests.ShadowDomTests">
