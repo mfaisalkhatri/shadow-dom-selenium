@@ -1,46 +1,34 @@
 package pages.google;
 
+import static setup.DriverManager.getDriver;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 
-import static setup.DriverManager.getDriver;
-
 public class DownloadPage {
 
-    public SearchContext expandRootElement (WebElement element) {
-        SearchContext shadowRoot = (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript (
+    public String downloadPageHeaderText () {
+
+        final WebElement downloadsManager = getDriver ().findElement (By.tagName ("downloads-manager"));
+        final SearchContext shadowRoot = downloadsManager.getShadowRoot ();
+        final WebElement toolbar = shadowRoot.findElement (By.id ("toolbar"));
+        final SearchContext shadowRootTwo = toolbar.getShadowRoot ();
+        final WebElement crToolbar = shadowRootTwo.findElement (By.cssSelector ("cr-toolbar"));
+        final SearchContext shadowRootThree = crToolbar.getShadowRoot ();
+        final WebElement downloadsHeader = shadowRootThree.findElement (By.cssSelector ("#leftSpacer > h1"));
+        return downloadsHeader.getText ();
+    }
+
+    public SearchContext expandRootElement (final WebElement element) {
+        final SearchContext shadowRoot = (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript (
             "return arguments[0].shadowRoot", element);
         return shadowRoot;
     }
 
-    public String pageHeaderTextUsingJScripExecutor () {
-        WebElement downloadsManagerTag = getDriver ().findElement (By.tagName ("downloads-manager"));
-        SearchContext shadowRootOne = expandRootElement (downloadsManagerTag);
-        WebElement toolbar = shadowRootOne.findElement (By.id ("toolbar"));
-        SearchContext shadowRootTwo = expandRootElement (toolbar);
-        WebElement crToolbar = shadowRootTwo.findElement (By.cssSelector ("cr-toolbar"));
-        SearchContext shadowRootThree = expandRootElement (crToolbar);
-        return shadowRootThree.findElement (By.cssSelector ("#leftSpacer > h1"))
-            .getText ();
-
-    }
-
-    public String downloadPageHeaderText () {
-
-        WebElement downloadsManager = getDriver ().findElement (By.tagName ("downloads-manager"));
-        SearchContext shadowRoot = downloadsManager.getShadowRoot ();
-        WebElement toolbar = shadowRoot.findElement (By.id ("toolbar"));
-        SearchContext shadowRootTwo = toolbar.getShadowRoot ();
-        WebElement crToolbar = shadowRootTwo.findElement (By.cssSelector ("cr-toolbar"));
-        SearchContext shadowRootThree = crToolbar.getShadowRoot ();
-        WebElement downloadsHeader = shadowRootThree.findElement (By.cssSelector ("#leftSpacer > h1"));
-        return downloadsHeader.getText ();
-    }
-
     public String googleDownloadPageHeaderText () {
-        WebElement pageHeader = getDriver ().findElement (By.tagName ("downloads-manager"))
+        final WebElement pageHeader = getDriver ().findElement (By.tagName ("downloads-manager"))
             .getShadowRoot ()
             .findElement (By.id ("toolbar"))
             .getShadowRoot ()
@@ -50,5 +38,15 @@ public class DownloadPage {
         return pageHeader.getText ();
     }
 
-}
+    public String pageHeaderTextUsingJScripExecutor () {
+        final WebElement downloadsManagerTag = getDriver ().findElement (By.tagName ("downloads-manager"));
+        final SearchContext shadowRootOne = expandRootElement (downloadsManagerTag);
+        final WebElement toolbar = shadowRootOne.findElement (By.id ("toolbar"));
+        final SearchContext shadowRootTwo = expandRootElement (toolbar);
+        final WebElement crToolbar = shadowRootTwo.findElement (By.cssSelector ("cr-toolbar"));
+        final SearchContext shadowRootThree = expandRootElement (crToolbar);
+        return shadowRootThree.findElement (By.cssSelector ("#leftSpacer > h1"))
+            .getText ();
 
+    }
+}

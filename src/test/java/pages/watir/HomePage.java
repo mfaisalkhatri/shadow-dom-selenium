@@ -14,20 +14,8 @@ import org.openqa.selenium.WebElement;
 public class HomePage {
 
     public SearchContext expandRootElement (final WebElement element) {
-        return (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript (
-            "return arguments[0].shadowRoot", element);
-    }
-
-    public String getSomeText () {
-        return getDriver ().findElement (By.cssSelector ("#shadow_content > span"))
-            .getText ();
-    }
-
-    public String getShadowDomText () {
-        final WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
-        final SearchContext shadowRoot = shadowHost.getShadowRoot ();
-        return shadowRoot.findElement (By.cssSelector ("#shadow_content > span"))
-            .getText ();
+        return (SearchContext) ((JavascriptExecutor) getDriver ()).executeScript ("return arguments[0].shadowRoot",
+            element);
     }
 
     public String getNestedShadowText () {
@@ -55,6 +43,17 @@ public class HomePage {
         final SearchContext shadowRootTwo = expandRootElement (nestedShadowHost);
         return shadowRootTwo.findElement (By.cssSelector ("#nested_shadow_content > div"))
             .getText ();
+    }
 
+    public String getShadowDomText () {
+        final WebElement shadowHost = getDriver ().findElement (By.id ("shadow_host"));
+        final SearchContext shadowRoot = shadowHost.getShadowRoot ();
+        return shadowRoot.findElement (By.cssSelector ("#shadow_content > span"))
+            .getText ();
+    }
+
+    public String getSomeText () {
+        return getDriver ().findElement (By.cssSelector ("#shadow_content > span"))
+            .getText ();
     }
 }
