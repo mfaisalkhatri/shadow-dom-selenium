@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Shadow DOM Automation Tests">
-    <test name="Shadow DOM Tests with Chrome Browser" enabled="false">
+    <test name="Shadow DOM Tests with Chrome Browser">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="ShadowDomTests">
+            <class name="tests.ShadowDomTests">
                 <methods>
                     <include name="testShadowDomRootOnChromeDownloadPage"/>
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-    <test name="Shadow DOM Tests with Firefox Browser" enabled="false">
+    </test>
+    <test name="Shadow DOM Tests with Firefox Browser">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="ShadowDomTests">
+            <class name="tests.ShadowDomTests">
                 <methods>
                     <include name="testShadowDom"/>
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-    <test name="Shadow DOM Tests on Watir Website" enabled="true">
+    </test>
+    <test name="Shadow DOM Tests on Watir Website" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
-            <class name="ShadowDomTests">
+            <class name="tests.ShadowDomTests">
                 <methods>
                     <include name="testShadowDomWatir"/>
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-    <test name="Shadow Root Element Tests on HTMLElements Website" enabled="false">
+    </test>
+    <test name="Shadow Root Element Tests on HTMLElements Website">
         <parameter name="browser" value="chrome"/>
         <classes>
-            <class name="ShadowRootTests">
+            <class name="tests.ShadowRootTests">
                 <methods>
                     <include name="testFileMenuShadowRootElement"/>
                     <include name="testNewMenuShadowRootElement"/>
@@ -43,11 +43,11 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
+    </test>
     <test name="Shadow Root Element Tests on HTMLElements Website on LambdaTest Cloud Grid" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
-            <class name="ShadowRootTests">
+            <class name="tests.ShadowRootTests">
                 <methods>
                     <include name="testFileMenuShadowRootElement"/>
                     <include name="testNewMenuShadowRootElement"/>
@@ -56,16 +56,15 @@
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-    <test name="Shadow DOM Tests on Selenium Playground Website" enabled="true">
+    </test>
+    <test name="Shadow DOM Tests on Selenium Playground Website" enabled="false">
         <parameter name="browser" value="remote-chrome"/>
         <classes>
-            <class name="ShadowDomTests">
+            <class name="tests.ShadowDomTests">
                 <methods>
                     <include name="testShadowDomSeleniumPlayground"/>
                 </methods>
             </class>
         </classes>
-    </test> <!-- Test -->
-
+    </test>
 </suite>
