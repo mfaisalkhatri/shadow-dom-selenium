@@ -1,5 +1,3 @@
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
-
 ## Don't forget to give a :star: to make the project popular.
 
 ## :question: What is this Repository about?
@@ -40,7 +38,7 @@ If you want to run it on your local machine, please update the browser value in 
 - Twitter: [mfaisal_khatri][twitter]
 - LinkedIn: [Mohammad Faisal Khatri][linkedin]
 
-## :thought_balloon: Checkout the blogs related to Testing on my [website][] and [medium-account][medium]
+## :thought_balloon: Checkout the blogs related to Software Testing and Test Automation on my [Medium][medium] blog
 
 [mail]: mohammadfaisalkhatri@gmail.com
 
@@ -48,11 +46,7 @@ If you want to run it on your local machine, please update the browser value in 
 
 [twitter]: https://twitter.com/mfaisal_khatri
 
-[lambdawebsite]:https://www.lambdatest.com/
-
 [the-internet]: http://the-internet.herokuapp.com/
-
-[website]: https://mfaisalkhatri.github.io
 
 [medium]: https://medium.com/@iamfaisalkhatri
 
